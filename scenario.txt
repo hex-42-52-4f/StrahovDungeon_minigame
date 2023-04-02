@@ -1,0 +1,25 @@
+(0) You are now in your room in Strahov. Will you leave $yellow$<1>$white$ or will you stay $yellow$<2>$white$?
+2 1 2
+
+(1) You left your room. You got insects, because you have not wrapped  plastic foil onto legs of your bed. $red$GAME END!$white$    
+0
+
+(2) You are under a big stress, because you have to pass exam and you have absolutly no idea about the subject. Will you learn $yellow$<1>$white$ or will you wrap plastic foil onto your beds legs $yellow$<2>$white$?
+2 3 4
+
+(3) Great! you passed the exam! But at the same time, you have not wraped plastic foil on to legs of your bed so you got bed bugs. $red$GAME END!$white$
+0
+
+(4) Great! You haven't got bed bugs and at the same time and you barely passed the exam. You are now tired and you want to go to bed, but your roommate is annoying as fuck. You looked orund the room and found bucket of water (for hand cleaing purposes) stending next to his bed and a hammer under the bed. You can leave him allone and try to sleep $yellow$<1>$white$ or you can ask him to be quiet $yellow$<2>$white$.
+2 5 5
+hammer bucket_of_water
+(5) Fuck that didn't work! You'll have to try something else! 
+-2 hammer bucket_of_water 6 7
+
+(6) You smashed head of your roommate. Nothing has happened to you since that. No one was searching for your roommate body. $gray$The story will continue, but for now $red$GAME END!$white$
+0
+
+(7) You accidentally woke up in the middle of the night and your roommate was sleeping. You've putted his hand into the bucket of water and he successfully urinated on himself. Next morning he was so pissed of that he took the hammer and smashed your head. $red$GAME END!$white$
+0
+
+ 
