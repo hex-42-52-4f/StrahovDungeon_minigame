@@ -1,3 +1,12 @@
+/*
+	TO DO LIST:
+	 - stack items in inventory!
+	 - auto select when coice count == 1 	DONE
+
+*/
+
+
+
 #include <iostream>		// include input output stream
 #include <string>		// include strings 
 #include <fstream>		// include file stream
@@ -163,11 +172,11 @@ void game::loadThings(std::string filename) {		// load things file and save it i
 
 void game::showInventory() {
 	std::cout << std::endl << "things in inventory:" << std::endl;
-	std::cout << std::left << std::setw(20) << "thing "
+	std::cout << std::left << "   " << std::setw(20) << "thing "
 	<< std::setw(8) << "count " << "ability " << std::endl;
 
 	for(int i = 0; i < inventory.size(); i++) {		// cycle for every single thing in invetory
-		std::cout << std::left << std::setw(20) << inventory[i].name
+		std::cout << std::left << std::setw(3) << i+1 << std::setw(20) << inventory[i].name
 		<< std::setw(8) << inventory[i].count << inventory[i].ability << std::endl;
 	}
 }
@@ -220,24 +229,49 @@ void game::play(int next) {
 			for(auto thing : pg->use_things) {
 				std::cout << thing << " ";
 			}
-			std::cout << std::endl;
-
+			std::cout << std::endl << "choose by typeing numer <1> to <.>" << std::endl;;
+			//std::cout << std::endl;
+			
 			showInventory();
 			SetConsoleTextAttribute(col, 7);
 		}
 
-		if(pg->signpost.size() > 0) {		// if signpost is empty game ends
+		if(pg->signpost.size() > 1) {		// if signpost is empty game ends
 			std::cout << "> ";		
 			std::cin >> this->choice;		// get user choice
-			next= pg->signpost.at(choice-1);	// sets next page from signpost
+			if(pg->use_things.size() > 0) {		// inventory check
+				for(int i = 0; i < inventory.size(); i++) {
+					//std::cout << "; found in inventory: " << pg->use_things.at(choice) << " " << inventory[i].name << std::endl;
+					//std::cout << "; found in inventory: " << inventory.at(choice-1).name << " " << pg->use_things.at(i+1) << std::endl;
+					//if(pg->use_things.at(choice) == inventory[i].name) {
+					if(inventory.at(choice-1).name == pg->use_things.at(i+1)) {
+						//std::cout << "; found in inventory: " << pg->use_things.at(choice-1) << " " << inventory[i].name << std::endl;
+	// !!!!					next= pg->signpost.at(choice-1);	// sets next page from signpost
+						next= pg->signpost.at(i);
+
+						//std::cout << "next " << next;
+						inventory[i].count--;		// thing in inventory that was used -1 
+						if(inventory[i].count == 0) {		// erase thing in inventory if count == 0
+							inventory.erase(inventory.begin()+i);
+						}
+						//showInventory(); 
+						break;
+					} else {
+						next= scenario.size()-1;	// sets next page to last page
+						//std::cout << "; set next to " <<scenario.size()-1 <<std::endl;
+					}
+				}
+			} else {
+				next= pg->signpost.at(choice-1);	// sets next page from signpost	
+			}
+			//next= pg->signpost.at(choice-1);	// sets next page from signpost
 			std::cout << std::endl;
+		} else if(pg->signpost.size() == 1) {
+			next= pg->signpost.at(0);
 		} else {
 			next = -1;	// indicates end of game
 		}
 	} while(next > 0);
-
-	//inventory.push_back(pile_of_junk[0]);
-	//inventory.push_back(pile_of_junk[1]);
 
 	//showInventory();
 	

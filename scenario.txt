@@ -10,16 +10,50 @@
 (3) Great! you passed the exam! But at the same time, you have not wraped plastic foil on to legs of your bed so you got bed bugs. $red$GAME END!$white$
 0
 
-(4) Great! You haven't got bed bugs and at the same time and you barely passed the exam. You are now tired and you want to go to bed, but your roommate is annoying as fuck. You looked orund the room and found bucket of water (for hand cleaing purposes) stending next to his bed and a hammer under the bed. You can leave him allone and try to sleep $yellow$<1>$white$ or you can ask him to be quiet $yellow$<2>$white$.
+(4) Great! You haven't got bed bugs and at the same time and you barely passed the exam. You are now tired and you want to go to bed, but your roommate is annoying as fuck. You looked orund the room and found bucket of water (for hand cleaing purposes) stending next to his bed and quite inpessive number of pans in his cabinet. You can leave him allone and try to sleep $yellow$<1>$white$ or you can ask him to be quiet $yellow$<2>$white$.
 2 5 5
-hammer bucket_of_water
+pan bucket_of_water
 (5) Fuck that didn't work! You'll have to try something else! 
--2 hammer bucket_of_water 6 7
+-2 pan bucket_of_water 6 7
 
-(6) You smashed head of your roommate. Nothing has happened to you since that. No one was searching for your roommate body. $gray$The story will continue, but for now $red$GAME END!$white$
+(6) You smashed head of your roommate. Nothing has happened to you since that. No one was searching for your roommate body, but it is starting to stink. You can leave it this way $yellow$<1>$white$, or you can do something with it $yellow$<2>$white$.
+2 8 9
+
+(7) You accidentally woke up in the middle of the night and your roommate was sleeping. You've putted his hand into the bucket of water and he successfully urinated on himself. Next morning he was so pissed of that he took the pan and smashed your head. $red$GAME END!$white$
 0
 
-(7) You accidentally woke up in the middle of the night and your roommate was sleeping. You've putted his hand into the bucket of water and he successfully urinated on himself. Next morning he was so pissed of that he took the hammer and smashed your head. $red$GAME END!$white$
+(8) There is a lot of stinky things in strahov, but this smell was really horrible and someone complained. The college management looked into your room when you were in school and found the body. They called the police and you were arrested. $red$GAME END!$white$
 0
 
- 
+(9) Do you want to use some item? Yes $yellow$<1>$white$ or No $yellow$<2>$white$
+2 10 11
+
+(10) Do you want to look around the room again? Yes $yellow$<1>$white$ or No $yellow$<2>$white$
+2 12 13
+
+(11)You tried to drag it into mobile garbage bin. Unfortunatly someone has seen you and called the police. They found the body. They didn't know whose the body was, but eventually you was found and arrested. $red$GAME END!$white$
+0
+
+(12) Great, you have found some new items!
+1 14
+pan plastic_bag
+(13)
+0
+
+(14) You have lookd around the collage and found a student with a shovel.
+1 15
+shovel
+(15) You can now choose what will you do with items you have found.
+-3 plastic_bag pan shovel 16 17 18
+
+(16) You've covered your roommates body with a plastic bag. You tried to drag it into mobile garbage bin. Unfortunatly someone has seen you and called the police. They found the body. They didn't know whose the body was, but eventually you was found and arrested. $red$GAME END!$white$
+0
+
+(17) You've tried to use pan, but honestly you had no clue what to do with it. At least you smashed the body a few times in rage and broke the pan. You tried to shove the body under the bed. Unfortunately that did not work. You can use oter item.
+1 15
+
+(18) You took the body and cut it to halves with the shovel. Then you took every half into Vojirova stola (stola XXII) and leave it in there. You lived rest your life in peace. $gray$Possible continue ... $red$GAME END!$white$
+0
+
+$red$GAME END YOU LOOSER$white$ not found in inventory!
+0
